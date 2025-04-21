@@ -51,15 +51,18 @@ Visit the website: [https://bhupeshthukral.github.io/resume-website/](https://bh
 ### Customization
 - Update content in `index.html`
 - Modify styles in `styles.css`
-- Replace profile image by updating the CSS
+- Replace profile image by updating the image file in the images folder
 
 ## Project Structure
 
 ```
 resume-website/
-├── index.html       # Main HTML file
-├── styles.css       # Stylesheet
-└── README.md        # Documentation
+├── index.html         # Main HTML file
+├── styles.css         # Stylesheet
+├── images/            # Images folder
+│   ├── profile.jpg    # Profile image
+│   └── ...            # Other images
+└── README.md          # Documentation
 ```
 
 ## Credits
