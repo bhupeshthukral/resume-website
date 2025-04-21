@@ -1,4 +1,4 @@
-# Bhupesh Thukral - Resume Website
+[# Bhupesh Thukral - Resume Website
 
 A modern, responsive personal resume website showcasing my professional experience, skills, and educational background.
 
@@ -68,3 +68,4 @@ resume-website/
 ## Credits
 
 This website was created by Bhupesh Thukral as part of a web development assignment, focusing on implementing CSS styling techniques to create a responsive and visually appealing resume website.
+](https://github.com/bhupeshthukral)
