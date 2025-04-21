@@ -3,221 +3,808 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhupesh Thukral - Digital Marketing Professional</title>
+    <title>Bhupesh Thukral - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav id="navbar">
-        <div class="container">
-            <h1 class="logo">Bhupesh Thukral</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="mac-os">
+        <div class="desktop-blur"></div>
 
-    <header id="showcase">
-        <div class="container">
-            <div class="header-content">
-                <div class="profile-img">
-                    <div class="img-placeholder"></div>
+        <!-- Top Menu Bar -->
+        <div class="menu-bar">
+            <div class="menu-bar-left">
+                <div class="apple-logo"><i class="fab fa-apple"></i></div>
+                <div class="menu-item active">Finder</div>
+                <div class="menu-item">File</div>
+                <div class="menu-item">Edit</div>
+                <div class="menu-item">View</div>
+                <div class="menu-item">Go</div>
+                <div class="menu-item">Window</div>
+                <div class="menu-item">Help</div>
+            </div>
+            <div class="menu-bar-right">
+                <div class="menu-icon"><i class="fas fa-battery-full"></i></div>
+                <div class="menu-icon"><i class="fas fa-wifi"></i></div>
+                <div class="menu-icon"><i class="fas fa-search"></i></div>
+                <div class="menu-icon"><i class="fas fa-cog"></i></div>
+                <div class="menu-time" id="current-time">Mon Apr 21</div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <i class="fas fa-search"></i> Search
+        </div>
+
+        <!-- Desktop Content -->
+        <div class="desktop">
+            <!-- Desktop Icons -->
+            <div class="desktop-icons">
+                <div class="desktop-icon" onclick="openWindow('about')">
+                    <div class="icon-img">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="icon-text">About Me</div>
                 </div>
-                <div class="profile-text">
-                    <h1>Bhupesh Thukral</h1>
-                    <h2>Digital Marketing Professional</h2>
-                    <p>Passionate about creating impactful digital marketing strategies and leading teams to success.</p>
-                    <a href="#contact" class="btn">Get In Touch</a>
+                <div class="desktop-icon" onclick="openWindow('experience')">
+                    <div class="icon-img">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="icon-text">Experience</div>
+                </div>
+                <div class="desktop-icon" onclick="openWindow('skills')">
+                    <div class="icon-img">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="icon-text">Skills</div>
+                </div>
+                <div class="desktop-icon" onclick="openWindow('education')">
+                    <div class="icon-img">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="icon-text">Education</div>
+                </div>
+                <div class="desktop-icon" onclick="openWindow('services')">
+                    <div class="icon-img">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="icon-text">Services</div>
+                </div>
+                <div class="desktop-icon" onclick="openWindow('contact')">
+                    <div class="icon-img">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="icon-text">Contact</div>
+                </div>
+            </div>
+
+            <!-- Finder Window - About Me -->
+            <div class="window" id="about-window">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <div class="control close" onclick="closeWindow('about')"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="window-title">About Me</div>
+                </div>
+                <div class="window-content finder-window">
+                    <div class="finder-sidebar">
+                        <div class="sidebar-section">
+                            <div class="sidebar-title">Favorites</div>
+                            <div class="sidebar-item active"><i class="fas fa-user"></i> Profile</div>
+                            <div class="sidebar-item"><i class="fas fa-star"></i> Highlights</div>
+                            <div class="sidebar-item"><i class="fas fa-fire"></i> Approach</div>
+                        </div>
+                    </div>
+                    <div class="finder-content">
+                        <div class="finder-view">
+                            <div class="profile-header">
+                                <div class="profile-image">
+                                    <!-- Replace with your actual image or use a placeholder image URL from a local file -->
+                                    <img src="images/profile.jpg" alt="Bhupesh Thukral">
+                                </div>
+                                <div class="profile-info">
+                                    <h1>Bhupesh Thukral</h1>
+                                    <h2>Content Marketing Specialist | Social Media Strategist | IIM Bangalore</h2>
+                                </div>
+                            </div>
+                            <div class="about-content">
+                                <p class="highlight-text">I've generated 100M+ views for startups and creators while studying at IIM Bangalore.</p>
+                                <p>Most "content marketers" push the same tired strategies that died in 2021. But here's the truth: The algorithms have changed. Attention spans have shrunk. And the old playbook doesn't work anymore.</p>
+                                
+                                <h3>The Uncomfortable Reality</h3>
+                                <p>I discovered this the hard way when my first 50 posts got less than 10 likes each. Then I cracked the code:</p>
+                                <ul class="custom-list">
+                                    <li><span class="check-icon">✅</span> The 3-Second Hook Formula that stops thumbs mid-scroll</li>
+                                    <li><span class="check-icon">✅</span> The Contrarian Snapback Method that multiplies engagement by 5X</li>
+                                    <li><span class="check-icon">✅</span> The Content Ecosystem Approach that turns followers into paying clients</li>
+                                </ul>
+                                
+                                <h3>Who Am I?</h3>
+                                <ul class="custom-list">
+                                    <li><span class="point-icon">👉</span> Bhupesh Thukral - IIM Bangalore student by day, content strategist by night</li>
+                                    <li><span class="point-icon">👉</span> Content Marketing Specialist with a track record of helping founders cut through the noise</li>
+                                    <li><span class="point-icon">👉</span> Growth Architect for 30+ brands and creators who were stuck in the "posting but not growing" trap</li>
+                                </ul>
+                                
+                                <h3>What Sets My Approach Apart</h3>
+                                <p>Most marketers focus on vanity metrics. I focus on conversion.</p>
+                                <p>Every strategy I implement is designed with one goal: turning content into customers, not just clicks. My clients don't just get engagement—they get business results that impact their bottom line.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finder Window - Experience -->
+            <div class="window" id="experience-window">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <div class="control close" onclick="closeWindow('experience')"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="window-title">Experience</div>
+                </div>
+                <div class="window-content finder-window">
+                    <div class="finder-sidebar">
+                        <div class="sidebar-section">
+                            <div class="sidebar-title">Companies</div>
+                            <div class="sidebar-item active"><i class="fas fa-building"></i> Zimpho</div>
+                            <div class="sidebar-item"><i class="fas fa-lightbulb"></i> Stealth Startup</div>
+                            <div class="sidebar-item"><i class="fas fa-eye"></i> third i</div>
+                            <div class="sidebar-item"><i class="fas fa-bullhorn"></i> Gamp</div>
+                            <div class="sidebar-item"><i class="fas fa-gamepad"></i> Carnival Gaming</div>
+                        </div>
+                    </div>
+                    <div class="finder-content">
+                        <div class="finder-view">
+                            <div class="experience-list">
+                                <div class="experience-item">
+                                    <div class="experience-logo">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="experience-details">
+                                        <div class="experience-title">Co-Founder</div>
+                                        <div class="experience-company">Zimpho</div>
+                                        <div class="experience-date">Mar 2025 - Present</div>
+                                        <div class="experience-location">Bengaluru, Karnataka, India</div>
+                                        <div class="experience-description">
+                                            <p>Building a results-driven content marketing agency that helps creators & brands scale their YouTube & Instagram with high-quality content, growth strategies, and engagement-driven marketing.</p>
+                                            <p>We handle everything—content production, video editing, thumbnails, optimization, and audience growth—so you can focus on what you do best: creating.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-item">
+                                    <div class="experience-logo">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div class="experience-details">
+                                        <div class="experience-title">Founder</div>
+                                        <div class="experience-company">Stealth Startup</div>
+                                        <div class="experience-date">Nov 2024 - Present</div>
+                                        <div class="experience-location">Bengaluru, Karnataka, India</div>
+                                        <div class="experience-description">
+                                            <p>Leading a stealth-mode startup focused on innovative content marketing solutions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-item">
+                                    <div class="experience-logo">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="experience-details">
+                                        <div class="experience-title">Associate Founder</div>
+                                        <div class="experience-company">third i</div>
+                                        <div class="experience-date">Jan 2025 - Mar 2025</div>
+                                        <div class="experience-location">Bangalore Urban, Karnataka, India</div>
+                                        <div class="experience-description">
+                                            <p>Specialized in sales strategy, lead generation, and growth marketing for early-stage startups.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-item">
+                                    <div class="experience-logo">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <div class="experience-details">
+                                        <div class="experience-title">Social Media Executive</div>
+                                        <div class="experience-company">Gamp</div>
+                                        <div class="experience-date">Jul 2024 - Jan 2025</div>
+                                        <div class="experience-location">Remote</div>
+                                        <div class="experience-description">
+                                            <p>Developed and executed social media strategies to drive engagement and growth across multiple platforms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-item">
+                                    <div class="experience-logo">
+                                        <i class="fas fa-gamepad"></i>
+                                    </div>
+                                    <div class="experience-details">
+                                        <div class="experience-title">Content Editor</div>
+                                        <div class="experience-company">Carnival Gaming</div>
+                                        <div class="experience-date">Apr 2024 - Jun 2024</div>
+                                        <div class="experience-location">India, Remote</div>
+                                        <div class="experience-description">
+                                            <p>Managed content development and strategy for gaming-related digital platforms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finder Window - Skills -->
+            <div class="window" id="skills-window">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <div class="control close" onclick="closeWindow('skills')"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="window-title">Skills</div>
+                </div>
+                <div class="window-content finder-window">
+                    <div class="finder-sidebar">
+                        <div class="sidebar-section">
+                            <div class="sidebar-title">Categories</div>
+                            <div class="sidebar-item active"><i class="fas fa-ad"></i> Marketing</div>
+                            <div class="sidebar-item"><i class="fas fa-search"></i> SEO & Analytics</div>
+                            <div class="sidebar-item"><i class="fas fa-pen"></i> Content Creation</div>
+                            <div class="sidebar-item"><i class="fas fa-chart-line"></i> Growth</div>
+                        </div>
+                    </div>
+                    <div class="finder-content">
+                        <div class="finder-view">
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h3><i class="fas fa-ad"></i> Marketing Skills</h3>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Digital Marketing</span>
+                                        <span class="skill-tag">Social Media Marketing</span>
+                                        <span class="skill-tag">Content Strategy</span>
+                                        <span class="skill-tag">Performance Marketing</span>
+                                        <span class="skill-tag">Brand Development</span>
+                                        <span class="skill-tag">Campaign Management</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h3><i class="fas fa-search"></i> SEO & Analytics</h3>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">SEO and SEM</span>
+                                        <span class="skill-tag">Google Analytics</span>
+                                        <span class="skill-tag">Data Analysis</span>
+                                        <span class="skill-tag">A/B Testing</span>
+                                        <span class="skill-tag">Conversion Rate Optimization</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h3><i class="fas fa-pen"></i> Content Creation</h3>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Copywriting</span>
+                                        <span class="skill-tag">Blog Writing</span>
+                                        <span class="skill-tag">Video Scripting</span>
+                                        <span class="skill-tag">Content Editing</span>
+                                        <span class="skill-tag">Visual Storytelling</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h3><i class="fas fa-chart-line"></i> Growth</h3>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Lead Generation</span>
+                                        <span class="skill-tag">Customer Acquisition</span>
+                                        <span class="skill-tag">Funnel Optimization</span>
+                                        <span class="skill-tag">Audience Building</span>
+                                        <span class="skill-tag">Retention Strategies</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finder Window - Education -->
+            <div class="window" id="education-window">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <div class="control close" onclick="closeWindow('education')"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="window-title">Education</div>
+                </div>
+                <div class="window-content finder-window">
+                    <div class="finder-sidebar">
+                        <div class="sidebar-section">
+                            <div class="sidebar-title">Institutions</div>
+                            <div class="sidebar-item active"><i class="fas fa-university"></i> IIM Bangalore</div>
+                        </div>
+                    </div>
+                    <div class="finder-content">
+                        <div class="finder-view">
+                            <div class="education-card">
+                                <div class="education-header">
+                                    <div class="education-logo">
+                                        <i class="fas fa-university"></i>
+                                    </div>
+                                    <div class="education-info">
+                                        <h3>Indian Institute of Management Bangalore</h3>
+                                        <p>Bachelor of Business Administration - BBA</p>
+                                        <p>Digital Business and Entrepreneurship</p>
+                                        <p class="education-date">Aug 2024 - Sep 2027</p>
+                                    </div>
+                                </div>
+                                <div class="education-content">
+                                    <h4>Areas of Study</h4>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Digital Marketing</span>
+                                        <span class="skill-tag">Entrepreneurship</span>
+                                        <span class="skill-tag">Business Strategy</span>
+                                        <span class="skill-tag">Digital Transformation</span>
+                                        <span class="skill-tag">E-Commerce</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finder Window - Services -->
+            <div class="window" id="services-window">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <div class="control close" onclick="closeWindow('services')"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="window-title">Services</div>
+                </div>
+                <div class="window-content finder-window">
+                    <div class="finder-sidebar">
+                        <div class="sidebar-section">
+                            <div class="sidebar-title">Categories</div>
+                            <div class="sidebar-item active"><i class="fas fa-hand-holding-usd"></i> Offerings</div>
+                            <div class="sidebar-item"><i class="fas fa-thumbs-up"></i> Approach</div>
+                            <div class="sidebar-item"><i class="fas fa-clipboard-list"></i> Non-Negotiables</div>
+                        </div>
+                    </div>
+                    <div class="finder-content">
+                        <div class="finder-view">
+                            <div class="services-grid">
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fas fa-palette"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Brand Marketing</h3>
+                                        <p>Building memorable brand identities that resonate with your target audience.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fas fa-pen-fancy"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Content Marketing</h3>
+                                        <p>Creating engaging content that converts followers into loyal customers.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Digital Marketing</h3>
+                                        <p>Comprehensive digital strategies that drive growth and engagement.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Market Research</h3>
+                                        <p>Data-driven insights to understand your market and competition.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Marketing Consulting</h3>
+                                        <p>Expert advice to optimize your marketing strategies and investments.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card">
+                                    <div class="service-icon">
+                                        <i class="fas fa-box-open"></i>
+                                    </div>
+                                    <div class="service-details">
+                                        <h3>Product Marketing</h3>
+                                        <p>Positioning your products effectively to maximize market penetration.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="approach-section">
+                                <h3>My Non-Negotiables</h3>
+                                <ul class="custom-list">
+                                    <li><span class="arrow-icon">→</span> <strong>No Cookie-Cutter Solutions</strong> — Your brand deserves a custom-built strategy</li>
+                                    <li><span class="arrow-icon">→</span> <strong>No BS Metrics</strong> — We track what matters: leads, sales, and ROI</li>
+                                    <li><span class="arrow-icon">→</span> <strong>No Set-and-Forget</strong> — I continuously optimize based on real performance data</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mail App - Contact -->
+            <div class="window" id="contact-window">
+                <div class="window-header">
+                    <div class="window-controls">
+                        <div class="control close" onclick="closeWindow('contact')"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="window-title">Mail - New Message</div>
+                </div>
+                <div class="window-content mail-window">
+                    <div class="mail-compose">
+                        <div class="mail-header">
+                            <div class="mail-field">
+                                <div class="mail-label">To:</div>
+                                <div class="mail-input">contact.bhupeshthukral@gmail.com</div>
+                            </div>
+                            <div class="mail-field">
+                                <div class="mail-label">Subject:</div>
+                                <div class="mail-input">Let's work together</div>
+                            </div>
+                        </div>
+                        <div class="mail-body">
+                            <textarea placeholder="Write your message here..."></textarea>
+                        </div>
+                        <div class="mail-footer">
+                            <button class="mail-button">Send Message</button>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p><a href="mailto:contact.bhupeshthukral@gmail.com">contact.bhupeshthukral@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Bengaluru, Karnataka, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p><a href="https://www.linkedin.com/in/bhupeshthukral/" target="_blank">linkedin.com/in/bhupeshthukral</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
 
-    <section id="about" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="section-description">I am a digital marketing professional with experience in performance marketing, SEO, SEM, and social media management. Currently pursuing my BBA in Digital Business and Entrepreneurship at Indian Institute of Management Bangalore while working as a Founder's Associate at third i.</p>
-        </div>
-    </section>
-
-    <section id="experience" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Founder's Associate</h3>
-                        <h4>third i | Remote</h4>
-                        <p class="date">Jan 2025 - Present</p>
-                        <p>Skills Used: Sales Strategy, Marketing, Social Media Management, Digital Marketing, Performance Marketing, SEO, SEM, Team Leadership</p>
-                    </div>
+        <!-- Dock -->
+        <div class="dock">
+            <div class="dock-container">
+                <div class="dock-item" onclick="openWindow('about')">
+                    <i class="fas fa-user"></i>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Social Media Executive</h3>
-                        <h4>Gamp | Remote</h4>
-                        <p class="date">Jul 2024 - Dec 2024</p>
-                        <p>Skills Used: Marketing Strategy, Content Marketing, Social Media Management, Influencer Marketing, Performance Marketing, SEO, SEM, Team Leadership</p>
-                    </div>
+                <div class="dock-item" onclick="openWindow('experience')">
+                    <i class="fas fa-briefcase"></i>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Chief Marketing Officer</h3>
-                        <h4>Zimpho | Kurukshetra (On-site)</h4>
-                        <p class="date">May 2024 - Jul 2024</p>
-                        <p>Skills Used: Graphic Design, Content Marketing, Team Leadership, Marketing Strategy, Google Ads, Facebook Ads</p>
-                    </div>
+                <div class="dock-item" onclick="openWindow('skills')">
+                    <i class="fas fa-tools"></i>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Content Editor Intern</h3>
-                        <h4>Carnival Gaming | Remote (Mumbai)</h4>
-                        <p class="date">Apr 2024 - Jun 2024</p>
-                        <p>Skills Used: Content Development, Content Strategy, SEO, Video Editing</p>
-                    </div>
+                <div class="dock-item" onclick="openWindow('education')">
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Chief Marketing Officer</h3>
-                        <h4>ThePlayNet | Chandigarh, Haryana, India (On-site)</h4>
-                        <p class="date">Sep 2022 - Apr 2024</p>
-                        <p>Skills Used: Marketing Strategy, Graphic Design, Content Creation, Performance Marketing, Social Media Management</p>
-                    </div>
+                <div class="dock-item" onclick="openWindow('services')">
+                    <i class="fas fa-cogs"></i>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Social Media Marketing Manager</h3>
-                        <h4>ThePlayNet | Remote (Chandigarh)</h4>
-                        <p class="date">Jul 2021 - Sep 2022</p>
-                        <p>Skills Used: Graphic Design, Content Creation, Social Media Management, Organic Marketing</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Social Media Marketing Manager</h3>
-                        <h4>Adorn Overseas | Kurukshetra, Haryana, India (On-site)</h4>
-                        <p class="date">Apr 2023 - Nov 2023</p>
-                        <p>Skills Used: Graphic Design, Content Creation, Influencer Marketing, Social Media Strategy</p>
-                    </div>
+                <div class="dock-item" onclick="openWindow('contact')">
+                    <i class="fas fa-envelope"></i>
+                    <div class="dock-notification">1</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="skills" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Relevant Skills</h2>
-            
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h3>Digital Marketing</h3>
-                    <p>Performance Marketing, SEO, SEM, Organic Marketing, Influencer Marketing</p>
-                </div>
-                
-                <div class="skill-card">
-                    <h3>Content Creation</h3>
-                    <p>Video Editing, Graphic Designing</p>
-                </div>
-                
-                <div class="skill-card">
-                    <h3>Advertising</h3>
-                    <p>Google Ads, Facebook Ads</p>
-                </div>
-                
-                <div class="skill-card">
-                    <h3>Leadership</h3>
-                    <p>Team Leadership, Project Management</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <script>
+    // Set current time in menu bar
+    function updateTime() {
+        const now = new Date();
+        const options = { weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+        document.getElementById('current-time').textContent = now.toLocaleDateString('en-US', options);
+    }
 
-    <section id="education" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            
-            <div class="education-container">
-                <div class="education-item">
-                    <h3>BBA in Digital Business and Entrepreneurship</h3>
-                    <h4>Indian Institute of Management Bangalore</h4>
-                    <p class="date">2024 - 2027 (Expected)</p>
-                    <p>Focus on digital business, marketing, and entrepreneurship.</p>
-                </div>
-                
-                <div class="education-item">
-                    <h3>High School Diploma in Commerce</h3>
-                    <h4>Greenfield Public School, Kurukshetra</h4>
-                    <p class="date">Graduated: 2023</p>
-                    <p>Developed a strong interest in business and marketing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    updateTime();
+    setInterval(updateTime, 60000); // Update every minute
 
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h3>Email</h3>
-                        <p><a href="mailto:contact.bhupeshthukral@gmail.com">contact.bhupeshthukral@gmail.com</a></p>
-                    </div>
+    // Window management
+    let activeWindow = null;
+    let zIndex = 10;
+
+    function openWindow(windowId) {
+        const windowElement = document.getElementById(windowId + '-window');
+
+        // If window is already open, just bring to front
+        if (windowElement.classList.contains('open')) {
+            bringToFront(windowElement);
+            return;
+        }
+
+        // Add animation classes for mac-like window opening
+        windowElement.style.transform = 'translate(-50%, -50%) scale(0.95)';
+        windowElement.style.opacity = '0';
+
+        windowElement.classList.add('open');
+
+        // Remove notification if any
+        const dockItem = document.querySelector(`.dock-item[onclick="openWindow('${windowId}')"] .dock-notification`);
+        if (dockItem) {
+            dockItem.style.display = 'none';
+        }
+
+        // Trigger animation
+        setTimeout(() => {
+            windowElement.style.transform = 'translate(-50%, -50%) scale(1)';
+            windowElement.style.opacity = '1';
+            bringToFront(windowElement);
+        }, 10);
+
+        // Set as active window
+        if (activeWindow) {
+            activeWindow.classList.remove('active-window');
+        }
+        windowElement.classList.add('active-window');
+        activeWindow = windowElement;
+
+        // Add bounce animation to dock icon
+        const dockIcon = document.querySelector(`.dock-item[onclick="openWindow('${windowId}')"]`);
+        if (dockIcon) {
+            dockIcon.classList.add('bounce');
+            setTimeout(() => {
+                dockIcon.classList.remove('bounce');
+            }, 500);
+        }
+    }
+
+    function closeWindow(windowId) {
+        const windowElement = document.getElementById(windowId + '-window');
+
+        // Add closing animation
+        windowElement.style.transform = 'translate(-50%, -55%) scale(0.95)';
+        windowElement.style.opacity = '0';
+
+        // Remove from DOM after animation completes
+        setTimeout(() => {
+            windowElement.classList.remove('open');
+            windowElement.style.transform = 'translate(-50%, -50%) scale(1)';
+        }, 200);
+
+        // Set new active window if needed
+        if (windowElement === activeWindow) {
+            activeWindow = null;
+
+            // Find highest visible window to set as active
+            const openWindows = document.querySelectorAll('.window.open');
+            if (openWindows.length > 0) {
+                let highestWindow = openWindows[0];
+                let highestZ = parseInt(highestWindow.style.zIndex || 0);
+                
+                for (let i = 1; i < openWindows.length; i++) {
+                    const currentZ = parseInt(openWindows[i].style.zIndex || 0);
+                    if (currentZ > highestZ) {
+                        highestZ = currentZ;
+                        highestWindow = openWindows[i];
+                    }
+                }
+                
+                highestWindow.classList.add('active-window');
+                activeWindow = highestWindow;
+            }
+        }
+    }
+
+    function bringToFront(windowElement) {
+        zIndex++;
+        windowElement.style.zIndex = zIndex;
+
+        // Set as active window
+        if (activeWindow) {
+            activeWindow.classList.remove('active-window');
+        }
+        windowElement.classList.add('active-window');
+        activeWindow = windowElement;
+    }
+
+    // Make windows draggable
+    const windows = document.querySelectorAll('.window');
+
+    windows.forEach(window => {
+        const header = window.querySelector('.window-header');
+
+        header.addEventListener('mousedown', (e) => {
+            if (e.target.closest('.control')) return; // Don't drag when clicking controls
+
+            bringToFront(window);
+
+            let offsetX = e.clientX - window.getBoundingClientRect().left;
+            let offsetY = e.clientY - window.getBoundingClientRect().top;
+
+            function mouseMoveHandler(e) {
+                // Calculate new position
+                let newLeft = e.clientX - offsetX;
+                let newTop = e.clientY - offsetY;
+                
+                // Make sure window doesn't go off-screen
+                const windowWidth = window.offsetWidth;
+                const windowHeight = window.offsetHeight;
+                const screenWidth = document.body.clientWidth;
+                const screenHeight = document.body.clientHeight;
+                
+                // Keep at least 100px of the window visible
+                newLeft = Math.max(-windowWidth + 100, Math.min(newLeft, screenWidth - 100));
+                newTop = Math.max(24, Math.min(newTop, screenHeight - 100)); // 24px is height of menu bar
+                
+                // Apply the new position
+                window.style.left = newLeft + 'px';
+                window.style.top = newTop + 'px';
+                
+                // Remove the transform centering since we're using absolute positioning
+                window.style.transform = 'none';
+            }
+
+            function mouseUpHandler() {
+                document.removeEventListener('mousemove', mouseMoveHandler);
+                document.removeEventListener('mouseup', mouseUpHandler);
+            }
+
+            document.addEventListener('mousemove', mouseMoveHandler);
+            document.addEventListener('mouseup', mouseUpHandler);
+        });
+
+        // Handle window clicks to bring to front
+        window.addEventListener('mousedown', function(e) {
+            if (!e.target.closest('.control')) {
+                bringToFront(window);
+            }
+        });
+    });
+
+    // Enable sidebar item functionality
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+
+    sidebarItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove active class from siblings
+            const siblings = Array.from(this.parentNode.children);
+            siblings.forEach(sibling => {
+                if (sibling.classList.contains('sidebar-item')) {
+                    sibling.classList.remove('active');
+                }
+            });
+
+            // Add active class to this item
+            this.classList.add('active');
+        });
+    });
+
+    // Mail app functionality
+    const mailButton = document.querySelector('.mail-button');
+    if (mailButton) {
+        mailButton.addEventListener('click', function() {
+            const textarea = document.querySelector('.mail-body textarea');
+            if (textarea.value.trim() === '') {
+                alert('Please enter a message before sending.');
+            } else {
+                alert('Message sent! Thank you for contacting me.');
+                textarea.value = '';
+            }
+        });
+    }
+
+    // Simulated search functionality
+    const searchBar = document.querySelector('.search-bar');
+    if (searchBar) {
+        searchBar.addEventListener('click', function() {
+            // Replace the content with an input field when clicked
+            this.innerHTML = '<input type="text" placeholder="Search" autofocus>';
+            const input = this.querySelector('input');
+
+            // Handle search submission
+            input.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    const searchTerm = this.value.toLowerCase().trim();
+                    if (searchTerm === 'about' || searchTerm === 'about me') {
+                        openWindow('about');
+                    } else if (searchTerm === 'experience' || searchTerm === 'work') {
+                        openWindow('experience');
+                    } else if (searchTerm === 'skills' || searchTerm === 'abilities') {
+                        openWindow('skills');
+                    } else if (searchTerm === 'education' || searchTerm === 'school') {
+                        openWindow('education');
+                    } else if (searchTerm === 'services' || searchTerm === 'offerings') {
+                        openWindow('services');
+                    } else if (searchTerm === 'contact' || searchTerm === 'email') {
+                        openWindow('contact');
+                    } else {
+                        alert('No results found for: ' + searchTerm);
+                    }
                     
-                    <div class="contact-item">
-                        <h3>Phone</h3>
-                        <p><a href="tel:+917988649580">+91-79886-49580</a></p>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <h3>LinkedIn</h3>
-                        <p><a href="#" target="_blank">View LinkedIn Profile</a></p>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+                    // Reset search bar
+                    searchBar.innerHTML = '<i class="fas fa-search"></i> Search';
+                }
+            });
 
-    <footer id="main-footer">
-        <div class="container">
-            <p>&copy; 2025 Bhupesh Thukral. All Rights Reserved.</p>
-        </div>
-    </footer>
+            // Reset when losing focus
+            input.addEventListener('blur', function() {
+                setTimeout(() => {
+                    searchBar.innerHTML = '<i class="fas fa-search"></i> Search';
+                }, 200);
+            });
+        });
+    }
+
+    // Menu bar functionality
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // For demonstration purposes only
+            if (this.textContent === 'Help') {
+                alert('This is a macOS-style resume website for Bhupesh Thukral. Click on desktop icons or dock items to explore different sections.');
+            }
+        });
+    });
+
+    // Open About window by default with a slight delay for a more natural feel
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            openWindow('about');
+        }, 500);
+    });
+    </script>
 </body>
 </html>
