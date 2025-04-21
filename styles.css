@@ -1,11 +1,10 @@
 /* 
-   MacOS-Style Resume Website CSS for Bhupesh Thukral
-   Description: MacOS UI design for a portfolio resume
+   Resume Website CSS for Bhupesh Thukral
 */
 
-/* ---------- GLOBAL STYLES ---------- */
+
 :root {
-    /* macOS Color palette - Modern Big Sur/Monterey style */
+  
     --mac-bg: #1e1e1e;
     --menu-bg: rgba(28, 28, 30, 0.7);
     --dock-bg: rgba(28, 28, 30, 0.7);
@@ -134,7 +133,7 @@ html, body {
 /* ---------- SEARCH BAR ---------- */
 .search-bar {
     position: absolute;
-    top: 15px;
+    top: 25px;
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
